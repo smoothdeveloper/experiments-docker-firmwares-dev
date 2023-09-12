@@ -25,6 +25,19 @@ docker build . -t artilam508dev
 docker run \
     -it \
     --mount type=bind,src="`PWD`/src",target=/root/src \
+    -p 222:22 \
     artilam508dev \
     bash
+```
+
+## to ssh into the instance
+
+start the ssh service
+```bash
+/etc/init.d/ssh start
+```
+
+on client
+```bash
+ssh -oHostKeyAlgorithms=+ssh-dss root@localhost -p 222
 ```
