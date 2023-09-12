@@ -30,7 +30,7 @@ docker run \
     bash
 ```
 
-## to ssh into the instance
+## to ssh into the docker instance
 
 start the ssh service
 ```bash
@@ -40,4 +40,17 @@ start the ssh service
 on client
 ```bash
 ssh -oHostKeyAlgorithms=+ssh-dss root@localhost -p 222
+```
+
+## interacting with artila M-508 device
+
+### ssh into the device
+
+```
+ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-dss root@m508.device.ip
+```
+
+### copy file to the device
+```
+scp file.to.copy root@m508.device.ip:/home/guest/folder.to.copy.into
 ```
