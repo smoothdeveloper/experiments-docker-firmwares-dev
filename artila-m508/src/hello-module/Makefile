@@ -7,6 +7,6 @@ PWD=$(shell pwd)
 obj-m += hello-module.o
 
 all:
-	make ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(MY_KERNEL_DIR) SUBDIRS=$(PWD) modules
+	make V=1 ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(MY_KERNEL_DIR) SUBDIRS=$(PWD) modules
 clean:
-	make ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(MY_KERNEL_DIR) SUBDIRS=$(PWD) clean
+	make V=1 ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(MY_KERNEL_DIR) SUBDIRS=$(PWD) clean
