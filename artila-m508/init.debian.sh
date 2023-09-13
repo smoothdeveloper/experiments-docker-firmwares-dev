@@ -1,5 +1,5 @@
 apt-get update -y --force-yes
-apt-get install -y --force-yes make gcc binutils wget bzip2 ssh libdigest-md5-file-perl
+apt-get install -y --force-yes make gcc g++ libgmp-dev libmpfr-dev libmpc-dev binutils wget bzip2 ssh libdigest-md5-file-perl xz-utils
 mkdir -p /opt/artila-m508-dev/
 tar -xvf ./M501-kernel-20100302.tar.gz -C /opt/artila-m508-dev  
 tar -xvf ./arm-linux-3.3.2.tar.bz2 -C /opt/artila-m508-dev

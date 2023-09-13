@@ -1,4 +1,4 @@
-FROM --platform=linux/i386 debian/eol:squeeze
+FROM --platform=linux/i386 debian:latest
 
 WORKDIR /root
 
