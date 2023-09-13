@@ -19,3 +19,4 @@ printk(KERN_INFO "Goodbye, world\n");
 
 module_init(hello_module_init);
 module_exit(hello_module_exit);
+
