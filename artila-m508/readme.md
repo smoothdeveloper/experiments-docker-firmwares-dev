@@ -17,6 +17,9 @@ build the image
 
 ```bash
 docker build . -t artilam508dev
+# or if you are changing the image, to capture the output:
+docker build . --progress=plain -t artilam508dev > builder.log 2>&1
+
 ```
 
 ## use the docker image

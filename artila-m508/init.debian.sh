@@ -1,12 +1,23 @@
-apt-get update -y --force-yes
-apt-get install -y --force-yes \
-  make patch \
-  gcc g++ libgmp-dev libmpfr-dev libmpc-dev \
-  binutils wget bzip2 ssh libdigest-md5-file-perl \
-  xz-utils
+apt-get update -y
+
+packages_to_install=(
+    make
+    bzip2
+    patch
+    gcc 
+    
+    # make linux kernel uses this
+    libdigest-md5-file-perl
+
+    # convenience
+    ssh
+    file
+)
+
+apt-get install -y "${packages_to_install[@]}"
 mkdir -p /opt/artila-m508-dev/
-tar -xvf ./M501-kernel-20100302.tar.gz -C /opt/artila-m508-dev  
-tar -xvf ./arm-linux-3.3.2.tar.bz2 -C /opt/artila-m508-dev
+tar -xf ./M501-kernel-20100302.tar.gz -C /opt/artila-m508-dev  
+tar -xf ./arm-linux-3.3.2.tar.bz2 -C /opt/artila-m508-dev
 cp -Rf /opt/artila-m508-dev/local3.3.2/. /usr/local
 cd /opt/artila-m508-dev/linux-2.6.x/
 
