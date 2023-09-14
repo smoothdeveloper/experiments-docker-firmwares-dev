@@ -25,6 +25,7 @@ docker build . -t artilam508dev
 docker run \
     -it \
     --mount type=bind,src="`PWD`/src",target=/root/src \
+    --mount type=bind,patch="`PWD`/src",target=/root/patch \
     -p 222:22 \
     artilam508dev \
     bash

@@ -1,0 +1,15 @@
+--- Makefile	2023-09-14 08:37:00.854560778 +0000
++++ Makefile_new	2023-09-14 08:40:06.122887077 +0000
+@@ -447,7 +447,11 @@
+ include $(srctree)/arch/$(ARCH)/Makefile
+ export KBUILD_DEFCONFIG
+ 
+-config %config: scripts_basic outputmakefile FORCE
++%config: scripts_basic outputmakefile FORCE
++	$(Q)mkdir -p include/linux
++	$(Q)$(MAKE) $(build)=scripts/kconfig $@
++
++config: scripts_basic outputmakefile FORCE
+ 	$(Q)mkdir -p include/linux
+ 	$(Q)$(MAKE) $(build)=scripts/kconfig $@
+ 
