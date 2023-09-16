@@ -56,5 +56,17 @@ ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-dss roo
 
 ### copy file to the device
 ```
-scp file.to.copy root@m508.device.ip:/home/guest/folder.to.copy.into
+scp -O -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-dss file.to.copy root@m508.device.ip:/home/guest/folder.to.copy.into
+```
+
+## build with CMake
+
+```bash
+cd src
+
+# configure the build (once), into build folder
+cmake -B build -DCMAKE_TOOLCHAIN_FILE=artila-m508.toolchain.cmake
+
+# run the build
+cmake --build build
 ```
