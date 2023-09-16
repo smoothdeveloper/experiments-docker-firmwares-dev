@@ -1,7 +1,6 @@
 ARCH=arm
 CROSS_COMPILE=arm-linux-
 MY_KERNEL_DIR=/opt/artila-m508-dev/linux-2.6.x/
-#EXTRA_CFLAGS=-I/usr/local/arm-linux/sys-include
 PWD=$(shell pwd)
 
 obj-m += hello-module.o
