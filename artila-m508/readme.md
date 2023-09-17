@@ -28,7 +28,7 @@ docker build . --progress=plain -t artilam508dev > builder.log 2>&1
 docker run \
     -it \
     --mount type=bind,src="`PWD`/src",target=/root/src \
-    --mount type=bind,patch="`PWD`/src",target=/root/patch \
+    --mount type=bind,src="`PWD`/patch",target=/root/patch \
     -p 222:22 \
     artilam508dev \
     bash
