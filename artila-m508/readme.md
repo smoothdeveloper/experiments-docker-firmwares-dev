@@ -70,3 +70,8 @@ cmake -B build -DCMAKE_TOOLCHAIN_FILE=artila-m508.toolchain.cmake
 # run the build
 cmake --build build
 ```
+
+## running X application inside docker image
+
+MacOS: 
+https://gist.github.com/sorny/969fe55d85c9b0035b0109a31cbcb088

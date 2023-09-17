@@ -12,11 +12,14 @@ packages_to_install=(
     ssh
     gdb
     gdbserver
+    gdb-multiarch
+    ddd
     cmake
     rsync
 
     # convenience
     file
+    x11-xserver-utils # ddd
 )
 
 apt-get install -y "${packages_to_install[@]}"
