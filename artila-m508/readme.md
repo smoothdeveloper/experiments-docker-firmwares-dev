@@ -61,6 +61,8 @@ scp -O -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-dss 
 
 ## build with CMake
 
+note: this is not yet supported / working
+
 ```bash
 cd src
 
@@ -75,3 +77,8 @@ cmake --build build
 
 MacOS: 
 https://gist.github.com/sorny/969fe55d85c9b0035b0109a31cbcb088
+
+## documentation
+
+* https://gcc.gnu.org/onlinedocs/gcc-3.2.3/gcc/
+* https://www.makelinux.net/ldd3/
